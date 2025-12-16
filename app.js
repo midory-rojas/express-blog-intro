@@ -10,6 +10,17 @@ app.get("/", (req, res) => {
     res.send("Server del mio blog"); //Verifica la risposta in postman
 })
 
+app.get("/bacheca", (req, res) => {
+    console.log(tipiDiCani);
+    const risposta = {
+        info: {
+            total: tipiDiCani.length,
+        },
+        results: tipiDiCani,
+    };
+    res.json(risposta);
+})
+
 app.listen(port, function () {
     console.log("Il server è in ascolto sulla porta " + port);
 })
