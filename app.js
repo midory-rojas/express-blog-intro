@@ -1,4 +1,6 @@
+import { tipiDiCani } from "./cani.js";
 import express from "express"; //Importo express 
+
 
 const app = express(); //Invoco express
 const port = 30002; //Creo una porta 3002
